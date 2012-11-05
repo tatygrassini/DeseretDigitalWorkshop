@@ -1,0 +1,27 @@
+$pad: 20px;
+
+@mixin mq($mq) {
+  @if $mq == mama-bear {
+    @media (max-width: 1250px) { @content; }
+  }
+  @if $mq == baby-bear {
+    @media (max-width: 800px) { @content; }
+  }
+  @if $mq == reverso-baby-bear {
+    @media (min-width: 800px) { @content; }
+  }
+  @if $mq == reverso-mama-bear {
+    @media (min-width: 1250px) { @content; }
+  }
+  @if $mq == retina {
+    @media
+      only screen and (-webkit-min-device-pixel-ratio: 2),
+      only screen and (   min--moz-device-pixel-ratio: 2),
+      only screen and (     -o-min-device-pixel-ratio: 2/1),
+      only screen and (        min-device-pixel-ratio: 2),
+      only screen and (                min-resolution: 192dpi),
+      only screen and (                min-resolution: 2dppx) {
+        @content;
+    }
+  }
+}

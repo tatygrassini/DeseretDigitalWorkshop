@@ -1,4 +1,1 @@
-DeseretDigitalWorkshop
-======================
-
-Template from Workshop
+Notes from the workshop [are here](http://css-tricks.com/deseret-digital-workshop/)

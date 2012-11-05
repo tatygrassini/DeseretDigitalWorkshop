@@ -1,0 +1,67 @@
+@import "compass/css3";
+@import "bits";
+@import "normalize";
+@import "toolbox";
+@import "grid";
+@import "module";
+@import "fonts";
+@import "typography";
+
+* {
+  @include box-sizing(border-box);
+}
+
+html {
+  background: url(../images/bedge_grunge.png);
+  @include mq(retina) {
+    background: url(../images/bedge_grunge_@2x.png);
+    background-size: 50%;
+  }
+}
+
+.page-wrap {
+  width: 75%;
+  margin: 20px auto;
+  @include mq(mama-bear) {
+    width: 100%;
+  }
+}
+
+.logo {
+  display: block;
+  padding: $pad;
+  img {
+    max-height: 100px;
+    vertical-align: middle;
+    @include filter(drop-shadow(2px 2px 2px rgba(0,0,0,0.5)));
+    @include transition(all 0.2s linear);
+    &:hover, &:active {
+      @include filter(drop-shadow(0 0 0 white));
+      @include transform(translate(2px, 2px));
+    }
+  }
+  @include mq(baby-bear) {
+    text-align: center;
+    padding: $pad/2;
+    img {
+      max-height: 50px;
+    }
+  }
+}
+
+@import "nav";
+
+
+// MEDIA
+img {
+  max-width: 100%;
+  height: auto;
+}
+figure {
+  text-align: center;
+  padding: $pad;
+  background: rgba(black, 0.2);
+}
+iframe {
+  max-width: 100%;
+}
